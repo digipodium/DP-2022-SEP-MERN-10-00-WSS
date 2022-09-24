@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Internal CSS</title>
+
+    <style>
+
+        h2{
+            color: crimson;
+        }
+
+        .myclass{
+            font-size: 30px;
+            text-decoration: underline;
+            color: blueviolet;
+        }
+
+        #abc{
+            border: 2px solid red;
+            text-align: center;
+            width: 80%;
+            font-size: 50px;
+            color: red;
+        }
+
+        .myclass2{
+            color: gold;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h2>Internal CSS is used to apply CSS on multiple tags once</h2>
+    
+    <h2 class="myclass">Style tag is used to apply CSS inside head tag</h2>
+
+    <p id="abc" class="myclass">Class Selectors are used to select elements by their class name</p>
+
+    <p id="abc" style="color: chartreuse">ID Selectors are used select unique elements by thier id</p>
+
+    <h2 class="myclass2 myclass">Priority among multiple classes</h2>
+
+</body>
+</html>
