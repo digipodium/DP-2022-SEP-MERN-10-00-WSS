@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .mycard {
+        /* border: 1px solid red; */
+        width: 50%;
+        border-radius: 5px;
+        /* box-shadow : x-offset y-offset blur size color */
+        /* text-shadow : x-offset y-offset blur color */
+        box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.306), -2px -2px 2px -1px rgba(0, 0, 0, 0.143);
+        background-color: white;
+        padding: 40px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mycard">
+      <div class="box1" style="background-color: red;">
+        <label for="fullname">Full Name</label>
+        <input id="fullname" type="text" placeholder="Enter Full Name" required minlength="3" />
+
+        <label for="">Address</label>
+        <br />
+        <textarea name="" id="" cols="40" rows="5"></textarea>
+
+        <br />
+        <br />
+
+        <label>Date of Birth</label>
+        <input type="date" />
+
+        <br />
+        <br />
+
+        <label for="">Gender</label>
+        <input type="radio" name="gender" checked /> Male <input type="radio" name="gender" /> Female
+
+        <br />
+        <br />
+
+        <label for="">Select City</label>
+        <select>
+          <option value="none">Select One</option>
+          <option value="lucknow">Lucknow</option>
+          <option value="">Bangalore</option>
+          <option value="">Allahabad</option>
+          <option value="">Gorakhpur</option>
+          <option value="">Varanasi</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label for="">Select State</label>
+        <input type="text" list="state" />
+        <datalist id="state">
+          <option>UP</option>
+          <option>Bihar</option>
+          <option>Delhi</option>
+          <option>Maharashtra</option>
+        </datalist>
+
+        <button type="submit">Submit</button>
+      </div>
+      <div class="box2" style="background-color: green;">
+        <label for="">Email</label>
+        <input type="email" placeholder="Enter Email Address" value="" required />
+      </div>
+    </div>
+  </body>
+</html>
