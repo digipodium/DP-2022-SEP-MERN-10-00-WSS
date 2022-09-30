@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS in HTML</title>
+
+    <link rel="stylesheet" href="mystyles.css">
+
+    <style>
+
+        h2{
+            text-decoration: underline dashed red;
+            /* font-size: 40px; */
+        }
+
+        .myclass{
+            font-size: 40px;
+        }
+        
+        #myid{
+            text-align: center;
+        }
+
+        .myclass2{
+            text-align: right;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Inline CSS -->
+    <h1 style="color: blue; font-style: italic; ">Inline CSS is used to style single tag at once</h1>
+    
+    <!-- Internal CSS -->
+    <h2>Internal CSS is used apply CSS on multiple tags at once</h2>
+
+    <h2>Name Selector is used target elements by their tag name</h2>
+
+    <h2 class="myclass">Class Selectors are used select elements by their class name</h2>
+
+    <h2 id="myid" class="myclass2">ID Selectors are used select elements by id name</h2>
+
+</body>
+</html>
