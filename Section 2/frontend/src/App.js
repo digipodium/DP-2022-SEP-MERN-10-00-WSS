@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import Login from './Components/Login';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Mubassir</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 style={ { color: 'white', backgroundColor: 'blueviolet', border: '1px solid red' } } >My React App</h1>
+      <button className='btn btn-primary'>Nice</button>
+
+      <br />
+      <Login />
+      <input type="text" />
     </div>
   );
 }
