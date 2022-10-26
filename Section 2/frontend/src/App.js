@@ -1,17 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 import Login from './Components/Login';
+import Home from './Components/Home';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
 
 function App() {
   
   return (
     <div>
-      <h1 style={ { color: 'white', backgroundColor: 'blueviolet', border: '1px solid red' } } >My React App</h1>
-      <button className='btn btn-primary'>Nice</button>
-
-      <br />
-      <Login />
-      <input type="text" />
+      <BrowserRouter>
+        {/* <Link to="/home">Home</Link>
+        <Link to="/login">Login</Link> */}
+        <Navbar/>
+        <Routes>
+            <Route element={<Home />} path="" />
+            <Route element={<Home />} path="home" />
+            <Route element={<Login />} path="login" />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

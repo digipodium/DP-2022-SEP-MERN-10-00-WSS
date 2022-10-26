@@ -37,7 +37,12 @@
   }
 }
 
-
 .mytext{
   color: red;
+}
+
+.nav-item .active{
+  color: blueviolet !important;
+  text-decoration: underline;
+  font-weight: bold;
 }
