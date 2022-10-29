@@ -4,6 +4,8 @@ import Login from './Components/Login';
 import Home from './Components/Home';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
+import EventHandling from './Components/EventHandling';
+import StateManagement from './Components/StateManagement';
 
 function App() {
   
@@ -17,6 +19,8 @@ function App() {
             <Route element={<Home />} path="" />
             <Route element={<Home />} path="home" />
             <Route element={<Login />} path="login" />
+            <Route element={<EventHandling />} path="event" />
+            <Route element={<StateManagement />} path="state" />
         </Routes>
       </BrowserRouter>
     </div>
