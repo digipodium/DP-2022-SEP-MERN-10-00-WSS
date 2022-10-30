@@ -6,6 +6,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import EventHandling from './Components/EventHandling';
 import StateManagement from './Components/StateManagement';
+import Chat from './Components/Chat';
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
             <Route element={<Login />} path="login" />
             <Route element={<EventHandling />} path="event" />
             <Route element={<StateManagement />} path="state" />
+            <Route element={<Chat />} path="chat" />
         </Routes>
       </BrowserRouter>
     </div>
