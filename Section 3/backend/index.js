@@ -7,6 +7,9 @@ const orderRouter = require('./routers/orderRouter');
 const app = express();
 const port = 5000;
 
+// to parse json data to javascript
+app.use(express.json());
+
 // using middleware
 app.use('/user', userRouter);
 app.use('/order', orderRouter);

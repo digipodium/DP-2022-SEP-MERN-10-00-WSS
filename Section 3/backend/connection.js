@@ -14,3 +14,5 @@ mongoose.connect(dbUrl)
     // catch will be executed on failure
     console.log(err);
 });
+
+module.exports = mongoose;
