@@ -32,10 +32,31 @@ router.get('/getbyusername/:username', (req, res) => {
   }).catch((err) => {
     res.json(err);
   });
-})
+});
+
+router.get('/getbyid/:userid', (req, res) => {
+  Model.findById(req.params.userid)
+  .then((result) => {
+    res.json(result);
+  }).catch((err) => {
+    console.log(err);
+    res.json(err);
+  });
+});
+
+
+router.delete('/delete/:userid', (req, res) => {
+  Model.findByIdAndDelete(req.params.userid)
+  .then((result) => {
+    res.json(result);
+  }).catch((err) => {
+    console.log(err);
+    res.json(err);
+  });
+});
 
 router.get("/update", (req, res) => {
   res.send("update request on user router")
 })
 
-module.exports = router
+module.exports = router;
