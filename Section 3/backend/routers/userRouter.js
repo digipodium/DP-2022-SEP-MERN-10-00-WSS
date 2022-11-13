@@ -8,10 +8,10 @@ router.post("/add", (req, res) => {
   new Model(req.body)
     .save()
     .then((result) => {
-      res.json(result)
+      res.json(result);
     })
     .catch((err) => {
-      res.json(err)
+      res.status(500).json(err); 
     })
 });
 
@@ -20,7 +20,7 @@ router.get('/getall', (req, res) => {
   .then((result) => {
     res.json(result);
   }).catch((err) => {
-    res.json(err);
+    res.status(500).json(err);
   });
 })
 
@@ -30,7 +30,7 @@ router.get('/getbyusername/:username', (req, res) => {
   .then((result) => {
     res.json(result);
   }).catch((err) => {
-    res.json(err);
+    res.status(500).json(err);
   });
 });
 
@@ -40,7 +40,7 @@ router.get('/getbyid/:userid', (req, res) => {
     res.json(result);
   }).catch((err) => {
     console.log(err);
-    res.json(err);
+    res.status(500).json(err);
   });
 });
 
@@ -51,7 +51,7 @@ router.delete('/delete/:userid', (req, res) => {
     res.json(result);
   }).catch((err) => {
     console.log(err);
-    res.json(err);
+    res.status(500).json(err);
   });
 });
 

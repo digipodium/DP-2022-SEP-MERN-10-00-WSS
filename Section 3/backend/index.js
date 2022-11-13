@@ -2,10 +2,16 @@
 const express = require("express");
 const userRouter = require('./routers/userRouter');
 const orderRouter = require('./routers/orderRouter');
+const cors = require('cors');
+
 
 // initializing express
 const app = express();
 const port = 5000;
+
+app.use( cors({
+  origin : [ 'http://localhost:3000' ]
+}) );
 
 // to parse json data to javascript
 app.use(express.json());

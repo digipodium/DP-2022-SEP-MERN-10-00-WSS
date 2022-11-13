@@ -1,10 +1,34 @@
 import { Formik } from 'formik'
 import React from 'react'
+import Swal from 'sweetalert2';
 
 const Register = () => {
 
-    const userSubmit = (formdata) => {
+    const userSubmit = async (formdata) => {
         console.log(formdata);
+
+        // 1. URL
+        // 2. Request Method
+        // 3. JSON Data
+        // 4. Type of Data
+
+        const res = await fetch('http://localhost:5000/user/add', {
+            method : 'POST',
+            body : JSON.stringify(formdata),
+            headers : { 'Content-Type' : 'application/json' }
+        });
+
+        console.log(res.status);
+        if(res.status === 200){
+            Swal.fire({
+                icon: 'success',
+                title : 'Success',
+                text : 'You have registered successfully'
+            })
+        }else{
+            
+        }
+
     }
 
   return (
@@ -29,7 +53,6 @@ const Register = () => {
                                 <input type="number" className='form-control mb-4' name="age" onChange={handleChange} value={values.age} />
 
                                 <button type='submit' className='btn btn-primary'>Submit</button>
-                            
                             </form>
                         ) }
 
