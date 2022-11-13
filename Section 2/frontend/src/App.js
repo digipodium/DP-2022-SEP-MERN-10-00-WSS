@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import EventHandling from './Components/EventHandling';
 import StateManagement from './Components/StateManagement';
 import Chat from './Components/Chat';
+import Register from './Components/Register';
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
             <Route element={<EventHandling />} path="event" />
             <Route element={<StateManagement />} path="state" />
             <Route element={<Chat />} path="chat" />
+            <Route element={<Register />} path="register" />
         </Routes>
       </BrowserRouter>
     </div>
