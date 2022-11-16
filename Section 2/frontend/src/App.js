@@ -8,6 +8,7 @@ import EventHandling from './Components/EventHandling';
 import StateManagement from './Components/StateManagement';
 import Chat from './Components/Chat';
 import Register from './Components/Register';
+import ManageUser from './Components/ManageUser';
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
             <Route element={<StateManagement />} path="state" />
             <Route element={<Chat />} path="chat" />
             <Route element={<Register />} path="register" />
+            <Route element={<ManageUser />} path="manageuser" />
         </Routes>
       </BrowserRouter>
     </div>

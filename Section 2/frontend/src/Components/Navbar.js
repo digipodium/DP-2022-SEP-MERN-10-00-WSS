@@ -10,13 +10,7 @@ const Navbar = () => {
         <div className="container">
           {/* Navbar brand */}
           <a className="navbar-brand me-2" href="https://mdbgo.com/">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-              height={16}
-              alt="MDB Logo"
-              loading="lazy"
-              style={{ marginTop: "-1px" }}
-            />
+            My React App
           </a>
           {/* Toggle button */}
           
@@ -42,6 +36,11 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/login">
                   Login
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/register">
+                  Signup
                 </NavLink>
               </li>
               <li className="nav-item">
