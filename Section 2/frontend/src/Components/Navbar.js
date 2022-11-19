@@ -58,6 +58,11 @@ const Navbar = () => {
                   Chat
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/manageuser">
+                  Manage User
+                </NavLink>
+              </li>
             </ul>
             {/* Left links */}
             <div className="d-flex align-items-center">

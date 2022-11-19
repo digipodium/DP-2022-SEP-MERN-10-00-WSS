@@ -9,11 +9,13 @@ import StateManagement from './Components/StateManagement';
 import Chat from './Components/Chat';
 import Register from './Components/Register';
 import ManageUser from './Components/ManageUser';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   
   return (
     <div>
+      <Toaster position='top-right' />
       <BrowserRouter>
         {/* <Link to="/home">Home</Link>
         <Link to="/login">Login</Link> */}
