@@ -56,8 +56,14 @@ router.delete('/delete/:userid', (req, res) => {
   });
 });
 
-router.get("/update", (req, res) => {
-  res.send("update request on user router")
+router.put("/update/:userid", (req, res) => {
+  
+  Model.findByIdAndUpdate(req.params.userid, req.body)
+  .then((result) => {
+    res.json(result);
+  }).catch((err) => {
+    res.status(500).json(err);
+  });
 })
 
 module.exports = router;
