@@ -5,11 +5,39 @@
 
 import React from "react"
 import { Formik } from "formik"
+import Swal from "sweetalert2";
 
 const Login = () => {
     
-  const loginSubmit = (formdata) => {
+  const loginSubmit = async (formdata) => {
     console.log(formdata);
+
+    const res = await fetch('http://localhost:5000/user/authenticate', {
+      method : 'POST',
+      body : JSON.stringify(formdata),
+      headers : {'Content-Type' : 'application/json'}
+    });
+
+    console.log(res.status)
+    if(res.status === 201){
+      Swal.fire({
+        icon : 'success',
+        title : 'Success',
+        text : 'You have loggedin successfully'
+      });
+    }else if(res.status === 401){
+      Swal.fire({
+        icon : 'error',
+        title : 'Error',
+        text : 'Email or Password is Incorrect'
+      });
+    }else{
+      Swal.fire({
+        icon : 'error',
+        title : 'Error',
+        text : 'Unknown error occured'
+      });
+    }
   }
 
   return (
@@ -22,7 +50,6 @@ const Login = () => {
                 <form onSubmit={handleSubmit}>
                   <h4 className="text-center">Login</h4>
                   <hr />
-
                   <label>Email Address</label>
                   <input className="form-control mb-4" name="email" onChange={handleChange} value={values.email} />
                   <label>Password</label>
