@@ -6,8 +6,11 @@
 import React from "react"
 import { Formik } from "formik"
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigate = useNavigate();
     
   const loginSubmit = async (formdata) => {
     console.log(formdata);
@@ -20,11 +23,19 @@ const Login = () => {
 
     console.log(res.status)
     if(res.status === 201){
+
+      const data = await res.json();
+
+      sessionStorage.setItem('user', JSON.stringify(data));
+
       Swal.fire({
         icon : 'success',
         title : 'Success',
         text : 'You have loggedin successfully'
       });
+
+      navigate('/chat');
+
     }else if(res.status === 401){
       Swal.fire({
         icon : 'error',
